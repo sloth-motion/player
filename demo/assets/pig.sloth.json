@@ -1,0 +1,528 @@
+{
+  "format": "sloth.asset",
+  "version": 1,
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1024 1024\" width=\"100%\" height=\"100%\">\n  <defs>\n    <radialGradient id=\"eye-grad\" cx=\"34%\" cy=\"26%\" r=\"82%\" fx=\"28%\" fy=\"22%\">\n      <stop offset=\"0\" stop-color=\"#cceeff\"/>\n      <stop offset=\"0.24\" stop-color=\"#39657a\"/>\n      <stop offset=\"1\" stop-color=\"#07151e\"/>\n    </radialGradient>\n    <clipPath id=\"clip-body\">\n      <path d=\"M 238 292 C 270 222 382 202 492 228 C 584 250 650 326 665 426 C 680 526 650 664 576 744 C 521 802 410 806 326 772 C 230 734 184 632 186 530 C 188 432 204 352 238 292 Z\" fill=\"#ffffff\" stroke=\"none\"/>\n    </clipPath>\n    <clipPath id=\"clip-head\">\n      <path d=\"M 522 302 C 580 252 700 244 772 278 C 842 312 882 406 872 502 C 862 592 836 690 762 746 C 706 786 610 776 556 720 C 506 668 494 590 502 510 C 508 424 492 354 522 302 Z\" fill=\"#ffffff\" stroke=\"none\"/>\n    </clipPath>\n    <clipPath id=\"clip-snout\">\n      <path d=\"M 652 624 C 666 588 720 568 786 572 C 846 576 872 612 860 658 C 850 704 812 732 752 728 C 706 725 666 700 652 670 C 644 653 645 639 652 624 Z\" fill=\"#ffffff\" stroke=\"none\"/>\n    </clipPath>\n  </defs>\n\n  <g id=\"hind-legs\" data-z=\"0.14\" data-pivot=\"324,820\">\n    <rect id=\"hind-leg-far\" x=\"235\" y=\"690\" width=\"60\" height=\"245\" rx=\"30\" ry=\"30\" fill=\"#efd0d2\" stroke=\"none\"/>\n    <rect id=\"hind-leg-near\" x=\"348\" y=\"700\" width=\"64\" height=\"235\" rx=\"32\" ry=\"32\" fill=\"#edcbce\" stroke=\"none\"/>\n  </g>\n\n  <g id=\"body\" data-z=\"0.30\" data-pivot=\"430,520\" clip-path=\"url(#clip-body)\">\n    <path id=\"body-base\" d=\"M 238 292 C 270 222 382 202 492 228 C 584 250 650 326 665 426 C 680 526 650 664 576 744 C 521 802 410 806 326 772 C 230 734 184 632 186 530 C 188 432 204 352 238 292 Z\" fill=\"#fbe9e7\" stroke=\"none\"/>\n    <circle id=\"body-sheen\" data-z=\"0.40\" data-pivot=\"350,380\" cx=\"350\" cy=\"380\" r=\"235\" fill=\"#ffffff\" opacity=\"0.50\" stroke=\"none\"/>\n  </g>\n\n  <g id=\"front-legs\" data-z=\"0.58\" data-pivot=\"620,850\">\n    <rect id=\"front-leg-left\" x=\"515\" y=\"768\" width=\"68\" height=\"178\" rx=\"34\" ry=\"34\" fill=\"#f8e3e2\" stroke=\"none\"/>\n    <rect id=\"front-leg-right\" x=\"658\" y=\"774\" width=\"70\" height=\"172\" rx=\"35\" ry=\"35\" fill=\"#f8e3e2\" stroke=\"none\"/>\n  </g>\n\n  <g id=\"head\" data-z=\"0.62\" data-pivot=\"690,520\" clip-path=\"url(#clip-head)\">\n    <path id=\"head-base\" d=\"M 522 302 C 580 252 700 244 772 278 C 842 312 882 406 872 502 C 862 592 836 690 762 746 C 706 786 610 776 556 720 C 506 668 494 590 502 510 C 508 424 492 354 522 302 Z\" fill=\"#fff5f2\" stroke=\"none\"/>\n    <path id=\"mouth\" d=\"M 662 704 C 696 738 754 746 806 700\" fill=\"none\" stroke=\"#8f5158\" stroke-width=\"9\" stroke-linecap=\"round\"/>\n    <circle id=\"head-sheen\" data-z=\"0.67\" data-pivot=\"580,365\" cx=\"580\" cy=\"365\" r=\"205\" fill=\"#ffffff\" opacity=\"0.45\" stroke=\"none\"/>\n  </g>\n\n  <g id=\"left-ear\" data-z=\"0.70\" data-pivot=\"520,310\">\n    <path id=\"left-ear-base\" d=\"M 556 354 C 528 320 500 280 470 240 C 510 238 555 266 580 306 C 596 332 590 358 570 382 C 562 372 558 363 556 354 Z\" fill=\"#f7dede\" stroke=\"none\"/>\n    <path id=\"left-ear-inner\" d=\"M 552 344 C 530 314 512 284 492 258 C 522 264 548 284 565 316 C 575 334 568 348 552 344 Z\" fill=\"#efaeb5\" stroke=\"none\"/>\n  </g>\n\n  <g id=\"right-ear\" data-z=\"0.70\" data-pivot=\"818,310\">\n    <path id=\"right-ear-base\" d=\"M 768 354 C 790 310 824 262 864 236 C 890 276 874 332 834 386 C 812 372 790 362 768 354 Z\" fill=\"#f7dede\" stroke=\"none\"/>\n    <path id=\"right-ear-inner\" d=\"M 784 346 C 806 310 834 276 856 256 C 864 286 850 322 822 366 C 810 356 796 350 784 346 Z\" fill=\"#efaeb5\" stroke=\"none\"/>\n  </g>\n\n  <g id=\"eyes\" data-z=\"0.78\" data-pivot=\"696,522\" data-parallax=\"1.2\">\n    <circle id=\"left-eye\" cx=\"606\" cy=\"520\" r=\"27\" fill=\"url(#eye-grad)\" stroke=\"none\"/>\n    <circle id=\"right-eye\" cx=\"786\" cy=\"524\" r=\"29\" fill=\"url(#eye-grad)\" stroke=\"none\"/>\n  </g>\n\n  <g id=\"snout\" data-z=\"0.86\" data-pivot=\"756,650\" clip-path=\"url(#clip-snout)\">\n    <path id=\"snout-base\" d=\"M 652 624 C 666 588 720 568 786 572 C 846 576 872 612 860 658 C 850 704 812 732 752 728 C 706 725 666 700 652 670 C 644 653 645 639 652 624 Z\" fill=\"#f4a6ae\" stroke=\"none\"/>\n    <circle id=\"snout-sheen\" data-z=\"0.90\" data-pivot=\"704,594\" cx=\"704\" cy=\"594\" r=\"136\" fill=\"#ffffff\" opacity=\"0.28\" stroke=\"none\"/>\n    <path id=\"nostrils\" data-z=\"0.92\" data-pivot=\"748,660\" d=\"M 700 638 C 688 638 684 650 688 666 C 692 680 703 682 709 670 C 714 658 710 640 700 638 Z M 790 642 C 778 642 774 654 778 670 C 782 684 793 686 799 674 C 804 662 800 644 790 642 Z\" fill=\"#a45a64\" opacity=\"0.9\" stroke=\"none\"/>\n  </g>\n\n  <path id=\"straw\" data-z=\"0.94\" data-pivot=\"746,795\" d=\"M 736 730 C 744 778 772 800 756 862\" fill=\"none\" stroke=\"#c6b46b\" stroke-width=\"13\" stroke-linecap=\"round\"/>\n</svg>",
+  "rig": {
+    "format": "vector.parallax",
+    "version": 1,
+    "viewBox": [
+      0,
+      0,
+      1024,
+      1024
+    ],
+    "cursor": {
+      "space": "normalized",
+      "neutral": [
+        0.5,
+        0.5
+      ]
+    },
+    "defaults": {
+      "shift": 40,
+      "scale": 0.06,
+      "rotate": 1.5,
+      "proximity": 0.55,
+      "direction": "inverse",
+      "neutralZ": 0.5
+    },
+    "nodes": [
+      {
+        "id": "hind-legs",
+        "tag": "g",
+        "z": 0.14,
+        "parentZ": 0.5,
+        "depth": -0.36,
+        "pivot": [
+          324,
+          820
+        ],
+        "gain": 1,
+        "baseTransform": null,
+        "translate": {
+          "x": {
+            "const": 0,
+            "cx": 14.399999999999999,
+            "cy": 0
+          },
+          "y": {
+            "const": 0,
+            "cx": 0,
+            "cy": 14.399999999999999
+          }
+        },
+        "scale": {
+          "const": 1,
+          "cx": 0,
+          "cy": 0,
+          "proximity": -0.043199999999999995,
+          "radius": 0.55,
+          "neutral": 0.8144439824043982
+        },
+        "rotate": {
+          "const": 0,
+          "cx": -1.08,
+          "cy": 1.08
+        }
+      },
+      {
+        "id": "body",
+        "tag": "g",
+        "z": 0.3,
+        "parentZ": 0.5,
+        "depth": -0.2,
+        "pivot": [
+          430,
+          520
+        ],
+        "gain": 1,
+        "baseTransform": null,
+        "translate": {
+          "x": {
+            "const": 0,
+            "cx": 8,
+            "cy": 0
+          },
+          "y": {
+            "const": 0,
+            "cx": 0,
+            "cy": 8
+          }
+        },
+        "scale": {
+          "const": 1,
+          "cx": 0,
+          "cy": 0,
+          "proximity": -0.024,
+          "radius": 0.55,
+          "neutral": 0.9893569738990357
+        },
+        "rotate": {
+          "const": 0,
+          "cx": -0.6000000000000001,
+          "cy": 0.6000000000000001
+        }
+      },
+      {
+        "id": "body-sheen",
+        "tag": "circle",
+        "z": 0.4,
+        "parentZ": 0.3,
+        "depth": 0.10000000000000003,
+        "pivot": [
+          350,
+          380
+        ],
+        "gain": 1,
+        "baseTransform": null,
+        "translate": {
+          "x": {
+            "const": 0,
+            "cx": -4.000000000000002,
+            "cy": 0
+          },
+          "y": {
+            "const": 0,
+            "cx": 0,
+            "cy": -4.000000000000002
+          }
+        },
+        "scale": {
+          "const": 1,
+          "cx": 0,
+          "cy": 0,
+          "proximity": 0.012000000000000004,
+          "radius": 0.55,
+          "neutral": 0.9334808844786155
+        },
+        "rotate": {
+          "const": 0,
+          "cx": 0.3000000000000001,
+          "cy": -0.3000000000000001
+        }
+      },
+      {
+        "id": "front-legs",
+        "tag": "g",
+        "z": 0.58,
+        "parentZ": 0.5,
+        "depth": 0.07999999999999996,
+        "pivot": [
+          620,
+          850
+        ],
+        "gain": 1,
+        "baseTransform": null,
+        "translate": {
+          "x": {
+            "const": 0,
+            "cx": -3.1999999999999984,
+            "cy": 0
+          },
+          "y": {
+            "const": 0,
+            "cx": 0,
+            "cy": -3.1999999999999984
+          }
+        },
+        "scale": {
+          "const": 1,
+          "cx": 0,
+          "cy": 0,
+          "proximity": 0.009599999999999996,
+          "radius": 0.55,
+          "neutral": 0.8199831828505211
+        },
+        "rotate": {
+          "const": 0,
+          "cx": 0.23999999999999988,
+          "cy": -0.23999999999999988
+        }
+      },
+      {
+        "id": "head",
+        "tag": "g",
+        "z": 0.62,
+        "parentZ": 0.5,
+        "depth": 0.12,
+        "pivot": [
+          690,
+          520
+        ],
+        "gain": 1,
+        "baseTransform": null,
+        "translate": {
+          "x": {
+            "const": 0,
+            "cx": -4.8,
+            "cy": 0
+          },
+          "y": {
+            "const": 0,
+            "cx": 0,
+            "cy": -4.8
+          }
+        },
+        "scale": {
+          "const": 1,
+          "cx": 0,
+          "cy": 0,
+          "proximity": 0.0144,
+          "radius": 0.55,
+          "neutral": 0.9511865773799242
+        },
+        "rotate": {
+          "const": 0,
+          "cx": 0.36,
+          "cy": -0.36
+        }
+      },
+      {
+        "id": "head-sheen",
+        "tag": "circle",
+        "z": 0.67,
+        "parentZ": 0.62,
+        "depth": 0.050000000000000044,
+        "pivot": [
+          580,
+          365
+        ],
+        "gain": 1,
+        "baseTransform": null,
+        "translate": {
+          "x": {
+            "const": 0,
+            "cx": -2.0000000000000018,
+            "cy": 0
+          },
+          "y": {
+            "const": 0,
+            "cx": 0,
+            "cy": -2.0000000000000018
+          }
+        },
+        "scale": {
+          "const": 1,
+          "cx": 0,
+          "cy": 0,
+          "proximity": 0.006000000000000005,
+          "radius": 0.55,
+          "neutral": 0.9594916810854474
+        },
+        "rotate": {
+          "const": 0,
+          "cx": 0.15000000000000013,
+          "cy": -0.15000000000000013
+        }
+      },
+      {
+        "id": "left-ear",
+        "tag": "g",
+        "z": 0.7,
+        "parentZ": 0.5,
+        "depth": 0.19999999999999996,
+        "pivot": [
+          520,
+          310
+        ],
+        "gain": 1,
+        "baseTransform": null,
+        "translate": {
+          "x": {
+            "const": 0,
+            "cx": -7.999999999999998,
+            "cy": 0
+          },
+          "y": {
+            "const": 0,
+            "cx": 0,
+            "cy": -7.999999999999998
+          }
+        },
+        "scale": {
+          "const": 1,
+          "cx": 0,
+          "cy": 0,
+          "proximity": 0.023999999999999994,
+          "radius": 0.55,
+          "neutral": 0.9376100942614229
+        },
+        "rotate": {
+          "const": 0,
+          "cx": 0.5999999999999999,
+          "cy": -0.5999999999999999
+        }
+      },
+      {
+        "id": "right-ear",
+        "tag": "g",
+        "z": 0.7,
+        "parentZ": 0.5,
+        "depth": 0.19999999999999996,
+        "pivot": [
+          818,
+          310
+        ],
+        "gain": 1,
+        "baseTransform": null,
+        "translate": {
+          "x": {
+            "const": 0,
+            "cx": -7.999999999999998,
+            "cy": 0
+          },
+          "y": {
+            "const": 0,
+            "cx": 0,
+            "cy": -7.999999999999998
+          }
+        },
+        "scale": {
+          "const": 1,
+          "cx": 0,
+          "cy": 0,
+          "proximity": 0.023999999999999994,
+          "radius": 0.55,
+          "neutral": 0.8090289157361121
+        },
+        "rotate": {
+          "const": 0,
+          "cx": 0.5999999999999999,
+          "cy": -0.5999999999999999
+        }
+      },
+      {
+        "id": "eyes",
+        "tag": "g",
+        "z": 0.78,
+        "parentZ": 0.5,
+        "depth": 0.28,
+        "pivot": [
+          696,
+          522
+        ],
+        "gain": 1.2,
+        "baseTransform": null,
+        "translate": {
+          "x": {
+            "const": 0,
+            "cx": -13.440000000000001,
+            "cy": 0
+          },
+          "y": {
+            "const": 0,
+            "cx": 0,
+            "cy": -13.440000000000001
+          }
+        },
+        "scale": {
+          "const": 1,
+          "cx": 0,
+          "cy": 0,
+          "proximity": 0.04032,
+          "radius": 0.55,
+          "neutral": 0.9478817108197901
+        },
+        "rotate": {
+          "const": 0,
+          "cx": 1.008,
+          "cy": -1.008
+        }
+      },
+      {
+        "id": "snout",
+        "tag": "g",
+        "z": 0.86,
+        "parentZ": 0.5,
+        "depth": 0.36,
+        "pivot": [
+          756,
+          650
+        ],
+        "gain": 1,
+        "baseTransform": null,
+        "translate": {
+          "x": {
+            "const": 0,
+            "cx": -14.399999999999999,
+            "cy": 0
+          },
+          "y": {
+            "const": 0,
+            "cx": 0,
+            "cy": -14.399999999999999
+          }
+        },
+        "scale": {
+          "const": 1,
+          "cx": 0,
+          "cy": 0,
+          "proximity": 0.043199999999999995,
+          "radius": 0.55,
+          "neutral": 0.8834970566886742
+        },
+        "rotate": {
+          "const": 0,
+          "cx": 1.08,
+          "cy": -1.08
+        }
+      },
+      {
+        "id": "snout-sheen",
+        "tag": "circle",
+        "z": 0.9,
+        "parentZ": 0.86,
+        "depth": 0.040000000000000036,
+        "pivot": [
+          704,
+          594
+        ],
+        "gain": 1,
+        "baseTransform": null,
+        "translate": {
+          "x": {
+            "const": 0,
+            "cx": -1.6000000000000014,
+            "cy": 0
+          },
+          "y": {
+            "const": 0,
+            "cx": 0,
+            "cy": -1.6000000000000014
+          }
+        },
+        "scale": {
+          "const": 1,
+          "cx": 0,
+          "cy": 0,
+          "proximity": 0.004800000000000004,
+          "radius": 0.55,
+          "neutral": 0.9335986091567913
+        },
+        "rotate": {
+          "const": 0,
+          "cx": 0.1200000000000001,
+          "cy": -0.1200000000000001
+        }
+      },
+      {
+        "id": "nostrils",
+        "tag": "path",
+        "z": 0.92,
+        "parentZ": 0.86,
+        "depth": 0.06000000000000005,
+        "pivot": [
+          748,
+          660
+        ],
+        "gain": 1,
+        "baseTransform": null,
+        "translate": {
+          "x": {
+            "const": 0,
+            "cx": -2.400000000000002,
+            "cy": 0
+          },
+          "y": {
+            "const": 0,
+            "cx": 0,
+            "cy": -2.400000000000002
+          }
+        },
+        "scale": {
+          "const": 1,
+          "cx": 0,
+          "cy": 0,
+          "proximity": 0.007200000000000006,
+          "radius": 0.55,
+          "neutral": 0.8848629330404181
+        },
+        "rotate": {
+          "const": 0,
+          "cx": 0.18000000000000016,
+          "cy": -0.18000000000000016
+        }
+      },
+      {
+        "id": "straw",
+        "tag": "path",
+        "z": 0.94,
+        "parentZ": 0.5,
+        "depth": 0.43999999999999995,
+        "pivot": [
+          746,
+          795
+        ],
+        "gain": 1,
+        "baseTransform": null,
+        "translate": {
+          "x": {
+            "const": 0,
+            "cx": -17.599999999999998,
+            "cy": 0
+          },
+          "y": {
+            "const": 0,
+            "cx": 0,
+            "cy": -17.599999999999998
+          }
+        },
+        "scale": {
+          "const": 1,
+          "cx": 0,
+          "cy": 0,
+          "proximity": 0.05279999999999999,
+          "radius": 0.55,
+          "neutral": 0.8085125883534756
+        },
+        "rotate": {
+          "const": 0,
+          "cx": 1.3199999999999998,
+          "cy": -1.3199999999999998
+        }
+      }
+    ],
+    "synthetic": false,
+    "warnings": []
+  }
+}
