@@ -148,7 +148,7 @@ pnpm test        # vitest
 pnpm build       # esm + cjs + umd + types
 pnpm size        # gzip budgets
 pnpm check       # typecheck + test + build + size
-node scripts/serve-demo.mjs   # demo at http://localhost:4321
+node scripts/serve-demo.mjs   # demo at http://localhost:4322
 ```
 
 ## License
