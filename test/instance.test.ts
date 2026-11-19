@@ -70,6 +70,27 @@ describe("create", () => {
     expect(events).toEqual(["destroy"]);
   });
 
+  it("honours an intensity authored in the rig", async () => {
+    const withIntensity = {
+      ...depthRig,
+      defaults: { ...depthRig.defaults, intensity: 2 },
+    };
+    const host = document.createElement("div");
+    document.body.append(host);
+    instance = create(
+      host,
+      { svg: sampleSvg, rig: withIntensity },
+      { mode: "manual", idle: false },
+    );
+    await instance.ready;
+    instance.setCursor(1, 0.5, true);
+
+    const transform =
+      host.shadowRoot?.querySelector("#head")?.getAttribute("transform") ?? "";
+    // shift multiplier = 80 / defaults.shift (40) = 2, doubled by intensity.
+    expect(transform).toContain("translate(-19.2 0)");
+  });
+
   it("tolerates undefined options forwarded by wrappers", async () => {
     const host = document.createElement("div");
     document.body.append(host);

@@ -201,7 +201,6 @@ export function create(
       | "mode"
       | "track"
       | "idle"
-      | "intensity"
       | "speed"
       | "response"
       | "sandbox"
@@ -212,7 +211,8 @@ export function create(
     mode: options.mode ?? "pointer",
     track: options.track ?? "element",
     idle: options.idle ?? true,
-    intensity: options.intensity ?? 1,
+    // Resolved against `rig.defaults.intensity` once the asset is loaded.
+    intensity: options.intensity,
     speed: options.speed ?? 1,
     response: options.response ?? 90,
     sandbox: options.sandbox ?? true,
@@ -237,6 +237,7 @@ export function create(
   let rig: ParallaxRig | null = null;
   let viewBox: ViewBox = DEFAULT_VIEW_BOX;
   let multipliers = { shift: 1, scale: 1 };
+  let intensityOverride: number | null = options.intensity ?? null;
   let elements = new Map<string, Element>();
   let baseTransforms = new Map<string, string | null>();
 
@@ -520,7 +521,8 @@ export function create(
   }
 
   function setIntensity(intensity: number): void {
-    const value = clamp(intensity, 0, 3);
+    intensityOverride = clamp(intensity, 0, 3);
+    const value = intensityOverride;
     const defaults = rig?.defaults ?? {};
     const baseShift = settings.multipliers?.shift ?? (defaults.shift ? 80 / defaults.shift : 1);
     const baseScale = settings.multipliers?.scale ?? (defaults.scale ? 0.2 / defaults.scale : 1);
@@ -576,8 +578,8 @@ export function create(
       const baseShift = settings.multipliers?.shift ?? (defaults.shift ? 80 / defaults.shift : 1);
       const baseScale = settings.multipliers?.scale ?? (defaults.scale ? 0.2 / defaults.scale : 1);
       multipliers = {
-        shift: baseShift * clamp(settings.intensity, 0, 3),
-        scale: baseScale * clamp(settings.intensity, 0, 3),
+        shift: baseShift * clamp(intensityOverride ?? rig.defaults?.intensity ?? 1, 0, 3),
+        scale: baseScale * clamp(intensityOverride ?? rig.defaults?.intensity ?? 1, 0, 3),
       };
 
       mounted = true;

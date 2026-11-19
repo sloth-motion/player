@@ -64,6 +64,8 @@ export interface ParallaxRig {
     proximity?: number;
     direction?: string;
     neutralZ?: number;
+    /** Authored motion strength; multiplies the derived multipliers. */
+    intensity?: number;
   };
   nodes: ParallaxNode[];
   anchors?: ParallaxAnchor[];
