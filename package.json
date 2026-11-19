@@ -1,5 +1,5 @@
 {
-  "name": "@slothmotion/player",
+  "name": "@sloth-motion-labs/player",
   "version": "0.1.0",
   "description": "Cursor, scroll and tilt parallax for static SVG. Dependency-free, framework-agnostic, under 8 kB.",
   "license": "MIT",
@@ -63,5 +63,12 @@
   "engines": {
     "node": ">=20"
   },
-  "packageManager": "pnpm@11.1.2"
+  "packageManager": "pnpm@11.1.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/sloth-motion/player#readme",
+  "bugs": {
+    "url": "https://github.com/sloth-motion/player/issues"
+  }
 }

@@ -6,6 +6,7 @@ on:
 
 permissions:
   contents: read
+  # Trusted publishing: npm verifies this OIDC token instead of a stored secret.
   id-token: write
 
 jobs:
@@ -20,10 +21,10 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
-          registry-url: https://registry.npmjs.org
+
+      # Trusted publishing needs npm >= 11.5.1; Node 22 ships npm 10.
+      - run: npm install -g npm@latest
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm check
-      - run: pnpm publish --access public --no-git-checks --provenance
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: npm publish --provenance

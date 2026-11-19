@@ -1,4 +1,4 @@
-# @slothmotion/player
+# @sloth-motion-labs/player
 
 Cursor, scroll and tilt parallax for static SVG.
 
@@ -14,13 +14,13 @@ pivots and anchors authored by the SlothMotion pipeline — and rewrites only
 ## Install
 
 ```bash
-npm install @slothmotion/player
+npm install @sloth-motion-labs/player
 ```
 
 Or skip the bundler:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@slothmotion/player/dist/sloth.umd.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@sloth-motion-labs/player/dist/sloth.umd.js" defer></script>
 ```
 
 ## Use
@@ -29,7 +29,7 @@ Or skip the bundler:
 
 ```html
 <div data-sloth="/assets/teapot.sloth.json" data-sloth-theme="dark"></div>
-<script type="module" src="/node_modules/@slothmotion/player/dist/auto.js"></script>
+<script type="module" src="/node_modules/@sloth-motion-labs/player/dist/auto.js"></script>
 ```
 
 `auto.js` binds every `[data-sloth]` element on load. Attributes:
@@ -48,7 +48,7 @@ Or skip the bundler:
 
 ```html
 <script type="module">
-  import { defineSlothPlayer } from "@slothmotion/player/element";
+  import { defineSlothPlayer } from "@sloth-motion-labs/player/element";
   defineSlothPlayer();
 </script>
 
@@ -58,7 +58,7 @@ Or skip the bundler:
 ### Imperative
 
 ```ts
-import { create } from "@slothmotion/player";
+import { create } from "@sloth-motion-labs/player";
 
 const player = create(
   document.querySelector("#stage")!,
