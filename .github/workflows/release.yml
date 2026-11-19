@@ -3,10 +3,11 @@ name: Release
 on:
   push:
     tags: ["v*"]
+  workflow_dispatch:
 
 permissions:
   contents: read
-  # Trusted publishing: npm verifies this OIDC token instead of a stored secret.
+  # Needed for provenance attestations.
   id-token: write
 
 jobs:
@@ -21,10 +22,15 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
+          registry-url: https://registry.npmjs.org
 
-      # Trusted publishing needs npm >= 11.5.1; Node 22 ships npm 10.
+      # Bootstrap: the package does not exist yet, so trusted publishing
+      # cannot be configured. Once @sloth-motion-labs/player exists, add a
+      # trusted publisher on npm and delete the NODE_AUTH_TOKEN line below.
       - run: npm install -g npm@latest
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm check
-      - run: npm publish --provenance
+      - run: npm publish --access public --provenance
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
