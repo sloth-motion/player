@@ -86,6 +86,24 @@ describe("create", () => {
     expect(registered).toContain("pointermove");
   });
 
+  it("moves layers after a pointermove", async () => {
+    const host = document.createElement("div");
+    document.body.append(host);
+    host.getBoundingClientRect = () =>
+      ({ left: 0, top: 0, width: 400, height: 400, right: 400, bottom: 400, x: 0, y: 0, toJSON() {} }) as DOMRect;
+
+    instance = create(host, { svg: sampleSvg, rig: depthRig }, { mode: "pointer", idle: false });
+    await instance.ready;
+
+    host.dispatchEvent(new MouseEvent("pointermove", { clientX: 400, clientY: 200, bubbles: true }));
+    await new Promise((resolve) => setTimeout(resolve, 150));
+
+    const transform = host.shadowRoot?.querySelector("#head")?.getAttribute("transform") ?? "";
+    expect(transform).not.toBe(
+      "translate(0 0) translate(650 450) rotate(0) scale(1) translate(-650 -450)",
+    );
+  });
+
   it("honours an intensity authored in the rig", async () => {
     const withIntensity = {
       ...depthRig,
