@@ -24,13 +24,8 @@ jobs:
           cache: pnpm
           registry-url: https://registry.npmjs.org
 
-      # Bootstrap: the package does not exist yet, so trusted publishing
-      # cannot be configured. Once @sloth-motion-labs/player exists, add a
-      # trusted publisher on npm and delete the NODE_AUTH_TOKEN line below.
       - run: npm install -g npm@latest
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm check
       - run: npm publish --access public --provenance
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
