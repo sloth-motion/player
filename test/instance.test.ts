@@ -70,6 +70,22 @@ describe("create", () => {
     expect(events).toEqual(["destroy"]);
   });
 
+  it("binds pointer listeners on creation", async () => {
+    const host = document.createElement("div");
+    document.body.append(host);
+    const registered: string[] = [];
+    const original = host.addEventListener.bind(host);
+    host.addEventListener = ((type: string, ...rest: unknown[]) => {
+      registered.push(type);
+      return (original as (...args: unknown[]) => void)(type, ...rest);
+    }) as typeof host.addEventListener;
+
+    instance = create(host, { svg: sampleSvg, rig: depthRig }, { mode: "pointer", idle: false });
+    await instance.ready;
+
+    expect(registered).toContain("pointermove");
+  });
+
   it("honours an intensity authored in the rig", async () => {
     const withIntensity = {
       ...depthRig,

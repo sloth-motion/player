@@ -473,10 +473,10 @@ export function create(
     const nextMode = staticNow ? "none" : (userMode ?? settings.mode);
     idleEnabled = !staticNow && settings.idle;
 
-    if (nextMode !== mode) {
-      mode = nextMode;
-      bindInputs();
-    }
+    // Always (re)bind: the initial mode has never been bound, and a policy
+    // change may need to restore inputs after the static fallback.
+    mode = nextMode;
+    bindInputs();
     if (staticNow) {
       state.target = { x: 0.5, y: 0.5 };
       state.current = { x: 0.5, y: 0.5 };

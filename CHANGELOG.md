@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1
+
+- Pointer, scroll and tilt listeners are now bound on creation. Before, they
+  were only bound when the mode changed, so an asset created in `pointer`
+  mode ignored the cursor until `setMode` was called.
+
 ## 0.2.0
 
 - Motion strength can be authored per asset via `rig.defaults.intensity`;
